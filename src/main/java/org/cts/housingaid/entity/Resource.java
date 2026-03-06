@@ -1,49 +1,56 @@
 package org.cts.housingaid.entity;
 
-public class Resource {
-    private Integer resourceID;
-    private Integer projectID;
-    private Integer resourceType;
-    private Integer resourceQuantity;
-    private Integer resourceStatus;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
-    public Integer getResourceID() {
+@Entity
+@Table(schema="Resource")
+public class Resource {
+    @Id
+    private int resourceID;
+    private int projectID;
+    private String resourceType;
+    private int resourceQuantity;
+    private String resourceStatus;
+
+    public int getResourceID() {
         return resourceID;
     }
 
-    public void setResourceID(Integer resourceID) {
+    public void setResourceID(int resourceID) {
         this.resourceID = resourceID;
     }
 
-    public Integer getProjectID() {
+    public int getProjectID() {
         return projectID;
     }
 
-    public void setProjectID(Integer projectID) {
+    public void setProjectID(int projectID) {
         this.projectID = projectID;
     }
 
-    public Integer getResourceType() {
+    public String getResourceType() {
         return resourceType;
     }
 
-    public void setResourceType(Integer resourceType) {
+    public void setResourceType(String resourceType) {
         this.resourceType = resourceType;
     }
 
-    public Integer getResourceQuantity() {
+    public int getResourceQuantity() {
         return resourceQuantity;
     }
 
-    public void setResourceQuantity(Integer resourceQuantity) {
+    public void setResourceQuantity(int resourceQuantity) {
         this.resourceQuantity = resourceQuantity;
     }
 
-    public Integer getResourceStatus() {
+    public String getResourceStatus() {
         return resourceStatus;
     }
 
-    public void setResourceStatus(Integer resourceStatus) {
+    public void setResourceStatus(String resourceStatus) {
         this.resourceStatus = resourceStatus;
     }
 }

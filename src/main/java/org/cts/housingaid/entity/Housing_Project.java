@@ -1,21 +1,29 @@
 package org.cts.housingaid.entity;
-import java.time.LocalDate;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+import java.util.Date;
+
+@Entity
+@Table(schema =  "HousingProject")
 
 public class Housing_Project {
-    private Integer projectId;
+    @Id
+    private int projectId;
     private String projectTitle;
     private String projectDescription;
-    private LocalDate projectStartDate;
-    private LocalDate projectEndDate;
+    private Date projectStartDate;
+    private Date projectEndDate;
     private long projectNumberOfHouse;
     private String projectStatus;
     private long numberOfHouses;
 
-    public Integer getProjectId() {
+    public int getProjectId() {
         return projectId;
     }
 
-    public void setProjectId(Integer projectId) {
+    public void setProjectId(int projectId) {
         this.projectId = projectId;
     }
 
@@ -35,19 +43,19 @@ public class Housing_Project {
         this.projectDescription = projectDescription;
     }
 
-    public LocalDate getProjectStartDate() {
+    public Date getProjectStartDate() {
         return projectStartDate;
     }
 
-    public void setProjectStartDate(LocalDate projectStartDate) {
+    public void setProjectStartDate(Date projectStartDate) {
         this.projectStartDate = projectStartDate;
     }
 
-    public LocalDate getProjectEndDate() {
+    public Date getProjectEndDate() {
         return projectEndDate;
     }
 
-    public void setProjectEndDate(LocalDate projectEndDate) {
+    public void setProjectEndDate(Date projectEndDate) {
         this.projectEndDate = projectEndDate;
     }
 

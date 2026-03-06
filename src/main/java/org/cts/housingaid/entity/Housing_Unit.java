@@ -1,19 +1,25 @@
 package org.cts.housingaid.entity;
 
-public class Housing_Unit {
-    private Integer projectID;
-    private String housingLocation;
-    private Integer housingUnitId;
-    private String housingType;
-    private Integer housingCapacity;
-    private String housingStatus;
-    private String housingField;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
-    public Integer getProjectID() {
+@Entity
+@Table(schema = "HousingUnit")
+public class Housing_Unit {
+    @Id
+    private int projectID;
+    private String housingLocation;
+    private int housingUnitId;
+    private String housingType;
+    private int housingCapacity;
+    private String housingStatus;
+
+    public int getProjectID() {
         return projectID;
     }
 
-    public void setProjectID(Integer projectID) {
+    public void setProjectID(int projectID) {
         this.projectID = projectID;
     }
 
@@ -25,11 +31,11 @@ public class Housing_Unit {
         this.housingLocation = housingLocation;
     }
 
-    public Integer getHousingUnitId() {
+    public int getHousingUnitId() {
         return housingUnitId;
     }
 
-    public void setHousingUnitId(Integer housingUnitId) {
+    public void setHousingUnitId(int housingUnitId) {
         this.housingUnitId = housingUnitId;
     }
 
@@ -41,11 +47,11 @@ public class Housing_Unit {
         this.housingType = housingType;
     }
 
-    public Integer getHousingCapacity() {
+    public int getHousingCapacity() {
         return housingCapacity;
     }
 
-    public void setHousingCapacity(Integer housingCapacity) {
+    public void setHousingCapacity(int housingCapacity) {
         this.housingCapacity = housingCapacity;
     }
 
@@ -57,11 +63,4 @@ public class Housing_Unit {
         this.housingStatus = housingStatus;
     }
 
-    public String getHousingField() {
-        return housingField;
-    }
-
-    public void setHousingField(String housingField) {
-        this.housingField = housingField;
-    }
 }
