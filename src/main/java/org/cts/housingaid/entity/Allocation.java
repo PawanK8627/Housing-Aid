@@ -1,8 +1,17 @@
 package org.cts.housingaid.entity;
 
+
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
 import java.time.LocalDate;
 
+@Entity
+@Table(schema="Allocation")
 public class Allocation {
+    @Id
     private int applicationId;
     private int allocationId;
     private int unitId;

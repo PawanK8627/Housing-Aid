@@ -1,6 +1,14 @@
 package org.cts.housingaid.entity;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(schema="HousingUnit")
 public class HousingUnit {
+
+    @Id
     private int unitId;
     private String Location;
     private String type;
