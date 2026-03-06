@@ -6,6 +6,15 @@ public class HousingUnit {
     private String type;
     private int capacity;
     private String status;
+    private int projectId;
+
+    public int getProjectId() {
+        return projectId;
+    }
+
+    public void setProjectId(int projectId) {
+        this.projectId = projectId;
+    }
 
     public int getUnitId() {
         return unitId;
