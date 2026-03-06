@@ -1,25 +1,33 @@
 package org.cts.housingaid.entity;
 
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(schema = "Resource")
 public class Resource {
-    private String resourceId;
-    private String projectId;
+    @Id
+    private int resourceId;
+    private int projectId;
     private String resourceStatus;
-    private long resourceQuantity;
+    private int resourceQuantity;
     private String resourceType;
 
-    public String getResourceId() {
+    public int getResourceId() {
         return resourceId;
     }
 
-    public void setResourceId(String resourceId) {
+    public void setResourceId(int resourceId) {
         this.resourceId = resourceId;
     }
 
-    public String getProjectId() {
+    public int getProjectId() {
         return projectId;
     }
 
-    public void setProjectId(String projectId) {
+    public void setProjectId(int projectId) {
         this.projectId = projectId;
     }
 
@@ -31,11 +39,11 @@ public class Resource {
         this.resourceStatus = resourceStatus;
     }
 
-    public long getResourceQuantity() {
+    public int getResourceQuantity() {
         return resourceQuantity;
     }
 
-    public void setResourceQuantity(long resourceQuantity) {
+    public void setResourceQuantity(int resourceQuantity) {
         this.resourceQuantity = resourceQuantity;
     }
 

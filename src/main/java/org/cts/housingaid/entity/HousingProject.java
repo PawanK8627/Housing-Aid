@@ -1,24 +1,30 @@
 package org.cts.housingaid.entity;
 
-import java.time.LocalDate;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
+import java.util.Date;
+
+@Entity
+@Table(schema = "HousingProject")
 public class HousingProject {
 
-    private String projectId;
+    @Id
+    private int projectId;
     private String projectTitle;
     private String projectDescription;
-    private LocalDate projectStartDate;
-    private LocalDate projectEndDate;
-    private long projectBudget;
+    private Date projectStartDate;
+    private Date projectEndDate;
+    private double projectBudget;
     private String projectStatus;
-    private long numberOfHouses;
+    private int numberOfHouses;
 
-
-    public String getProjectId() {
+    public int getProjectId() {
         return projectId;
     }
 
-    public void setProjectId(String projectId) {
+    public void setProjectId(int projectId) {
         this.projectId = projectId;
     }
 
@@ -38,27 +44,27 @@ public class HousingProject {
         this.projectDescription = projectDescription;
     }
 
-    public LocalDate getProjectStartDate() {
+    public Date getProjectStartDate() {
         return projectStartDate;
     }
 
-    public void setProjectStartDate(LocalDate projectStartDate) {
+    public void setProjectStartDate(Date projectStartDate) {
         this.projectStartDate = projectStartDate;
     }
 
-    public LocalDate getProjectEndDate() {
+    public Date getProjectEndDate() {
         return projectEndDate;
     }
 
-    public void setProjectEndDate(LocalDate projectEndDate) {
+    public void setProjectEndDate(Date projectEndDate) {
         this.projectEndDate = projectEndDate;
     }
 
-    public long getProjectBudget() {
+    public double getProjectBudget() {
         return projectBudget;
     }
 
-    public void setProjectBudget(long projectBudget) {
+    public void setProjectBudget(double projectBudget) {
         this.projectBudget = projectBudget;
     }
 
@@ -70,11 +76,11 @@ public class HousingProject {
         this.projectStatus = projectStatus;
     }
 
-    public long getNumberOfHouses() {
+    public int getNumberOfHouses() {
         return numberOfHouses;
     }
 
-    public void setNumberOfHouses(long numberOfHouses) {
+    public void setNumberOfHouses(int numberOfHouses) {
         this.numberOfHouses = numberOfHouses;
     }
 }
