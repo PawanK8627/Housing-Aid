@@ -1,13 +1,29 @@
 package org.cts.housingaid.entity;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
 import java.time.LocalDate;
+@Entity
+@Table(schema="EligibilityCheck")
 public class EligibilityCheck {
+    @Id
+    private Long id;
     private int chechId;
     private int applicationId;
     private int officarId;
     private String result;
     private LocalDate date;
     private String notes;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public int getChechId() {
         return chechId;
